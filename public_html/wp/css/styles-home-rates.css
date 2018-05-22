@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+
+header {
+
+  font-size: 100%;
+  font-weight: bold;
+  text-align:center;
+  font-family: Lobster;
+  color: white;
+    margin: 0 auto;
+    min-width: 500px;
+  padding: 0.5px;
+  border-radius: 20px;
+
+}
+#wrapper{
+  border:10px solid #0b0;
+width: 300px;
+    height: 100px;
+
+}
+a{
+  text-decoration:none
+  
+}
+.box-image-iframe {
+  box-sizing: border-box;
+   display:flex;
+    border:10px solid #0b0;
+
+}
+.p-rates{
+  color:white;
+}
+p {
+  font-size: 25px;
+}
+
+/*this is NOT our code. It is modified W3Schools code. From here to when this comment is repeated.. URL: "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_pricing_table" */
+
+* {
+    box-sizing: border-box;
+}
+
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #7db9ed;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+/*this is NOT our code. It is modified W3Schools code. URL: "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_pricing_table" */
+
+header * {
+  
+  vertical-align: middle;
+  
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 20px;
+} 
+.section-home-welcome{
+    
+    font-family: 'Libre Baskerville', serif;
+    background-color: hsl(197, 43%, 66%);
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+
+}
+.section-home-camp-info{
+    
+font-family: 'Libre Baskerville', serif;
+    background-color: hsl(197, 43%, 66%);
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+
+}
+.section-background-behind-welcome-border{
+  background-color: hsl(162, 18%, 28%);
+  
+}
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+.left-logo {
+    width: 25%;
+    height: 25%;
+    display: block;
+    margin-right: auto;
+}
+h2{
+text-align: center;
+	  font-family: 'Lobster';
+	        font-size: 30px;
+
+
+}
+h1 {
+      text-align: center;
+      font-size: 40px;
+	  font-family: 'Lobster';
+
+
+}
+.facilities-home{
+      text-align: center;
+      font-size: 40px;
+      color:white;
+
+
+}
+
+header img {
+
+  filter: drop-shadow(-1px -1px 3px white);
+  -webkit-filter: drop-shadow(-1px -1px 3px white);
+}
+
+header, nav {
+  
+	background-size: cover;
+    background-color: #85baa1;
+}
+nav {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align:center;
+font-family: 'Lobster';
+  color: black;
+
+}
+footer {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align:center;
+font-family: 'Libre Baskerville', serif;
+  color: black;
+
+}
+
+nav ul {
+
+  padding:0;
+  margin:0.2em;
+  list-style: none;
+
+}
+nav a:hover,
+nav a:focus {
+  
+	color: white;
+
+}
+
+nav ul li {
+
+  display: inline-block;  
+  padding:0.2em;
+font-family: 'Lobster';
+	font-size: 30px;
+}
+
+footer * {
+  vertical-align: middle;
+}
+
+#more-about-me {
+  width:100%;
+}
+#more-about-me th {
+  padding:10px 15px;
+  width:200px;
+  background-color:rgba(240,255,255,0.95);
+  text-align:left;
+}
+#more-about-me td {
+  padding:10px 15px;
+  background-color:rgba(255,255,255,0.95);
+}
