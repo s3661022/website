@@ -33,20 +33,95 @@
       <h2>Let us know if you have any issues.</h2>
 <!--recent tute helped with this! -->
     <div class="section-contact">
-      <form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=contact" method="post">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+    <form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=contact" method="post">
+
+  <label for="fname">Full Name</label>
+  <input 
+  type="text" 
+  id="fname" 
+  name="name" 
+  pattern="[A-Z][A-Za-z' /-]+"
+  title="Name should only contain alphabetical or ',.,- characters and must begin with a uppercase character. e.g. John Smith." 
+  placeholder="Your full name" required>
+
 	<label for="email">Email</label>
-    <input type="email" name="email" placeholder="e.g 123@outlook.com" required>
-	<label for="phone">Phone Number</label>
-	<input type="tel" name="phone" name="phonenumber" placeholder="e.g.04" required>
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write something to us!" style="height:200px" required></textarea>
-<label for="mailing">Do you want to sign up to our mailing list?</label>
- <input type='checkbox' id="mail" name="mailing" value='yes'>
-	<input type="submit" value="Submit">
+  <input 
+  type="email" 
+  id="email" 
+  name="email" 
+  tile="Please enter a valid email address."
+  placeholder="e.g 123@outlook.com" required>
+  
+  <label for="phone">Phone Number</label>
+  <input 
+  type="tel" 
+  id="phone" 
+  name="phone" 
+  name="phonenumber" 
+  pattern="^(\(04\)|04|\+614)([ ]?\d){8}$" 
+  placeholder="e.g.04" required>
+
+  <label for="message">Message</label>
+  <textarea 
+  id ="message" 
+  name="message" 
+  placeholder="Leave us a message!">
+  </textarea>
+
+  <label for="rememberme">Remember me?</label>
+  <input 
+  type='checkbox' 
+  id="remember" 
+  name="rememberme" 
+  value="yes">
+  <br>
+  <br>
+  <label for="mailing">Do you want to sign up to our mailing list?</label>
+  <input 
+  type='checkbox' 
+  id="mailing" 
+  name="mailing" 
+  value="yes">
+  <br>
+  <br>
+  <input type="submit" value="Submit" onclick="submitFunction()">
+  <div id="result"></div>
+  <div id="result2"></div>
+  <div id="result3"></div>
+  <div id="result4"></div>
+  <script>
+        document.getElementById("fname").value = localStorage.getItem("storedName");
+        document.getElementById("email").value = localStorage.getItem("storedEmail");
+        document.getElementById("phone").value = localStorage.getItem("storedPhone");
+        document.getElementById("message").value = localStorage.getItem("storedMessage");
+        document.getElementById("mailing").checked = localStorage.getItem("storedMailing");
+        document.getElementById("remember").checked = localStorage.getItem("checkbox");
+        function submitFunction(){
+        if(document.getElementById("remember").checked == true){
+            localStorage.setItem("storedName", document.getElementById("fname").value);
+            document.getElementById("result").innerHTML = localStorage.getItem("storedName");
+            localStorage.setItem("storedEmail", document.getElementById("email").value);
+            document.getElementById("result2").innerHTML = localStorage.getItem("storedEmail");
+            localStorage.setItem("storedPhone", document.getElementById("phone").value);
+            document.getElementById("result3").innerHTML = localStorage.getItem("storedPhone");
+            localStorage.setItem("storedMessage", document.getElementById("message").value);
+            document.getElementById("result4").innerHTML = localStorage.getItem("storedMessage");
+            localStorage.setItem("storedMailing", document.getElementById("mailing").checked);
+            localStorage.setItem("checkbox", document.getElementById("remember").checked);
+        }
+        else{
+            window.localStorage.clear();
+            document.getElementById("result").innerHTML = localStorage.getItem("storedName");
+            document.getElementById("result2").innerHTML = localStorage.getItem("storedEmail");
+            document.getElementById("result3").innerHTML = localStorage.getItem("storedPhone");
+            document.getElementById("result4").innerHTML = localStorage.getItem("storedMessage");
+
+        }
+
+        //location.href = "../a3/index.php";
+        }
+        
+  </script>
   </form>
     </div>
   </section>
@@ -68,7 +143,7 @@
       </font>
     </section>
   </footer>
-
+      
 
   <script>
 
